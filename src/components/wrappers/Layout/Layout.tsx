@@ -19,7 +19,7 @@ export const Layout: FC<LayoutProps> = ({ children, customCss }) => {
 };
 
 const MainGrid = styled.div(() => [
-  tw`grid h-full w-full min-h-screen justify-center p-8 bg-zinc-800 text-neutral-100`,
+  tw`flex flex-col h-full w-full min-h-screen justify-start items-center p-8 bg-zinc-800 text-neutral-100`,
 ]);
 
 const InnerContent = styled.div(() => [tw`w-full max-w-5xl h-full`]);
