@@ -1,6 +1,7 @@
+import { Header } from '@/components/organisms/Header';
 import { CustomCssProps } from '@/types/types';
 import { FC, ReactNode } from 'react';
-import tw, { css, styled } from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 
 export type LayoutProps = CustomCssProps & {
   children?: ReactNode;
@@ -13,6 +14,7 @@ export type LayoutProps = CustomCssProps & {
 export const Layout: FC<LayoutProps> = ({ children, customCss }) => {
   return (
     <MainGrid>
+      <Header />
       <InnerContent>{children}</InnerContent>
     </MainGrid>
   );

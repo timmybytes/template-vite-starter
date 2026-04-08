@@ -1,25 +1,21 @@
-import React from 'react';
 import { Global } from '@emotion/react';
-import tw, { css, theme, GlobalStyles as BaseStyles } from 'twin.macro';
-
-// Just here to prevent React import from being removed on save
-type placeholder = React.ReactNode;
+import React from 'react';
+import tw, { GlobalStyles as BaseStyles, css, theme } from 'twin.macro';
 
 const customStyles = css({
-  body: {
-    WebkitTapHighlightColor: theme`colors.purple.500`,
-    ...tw`antialiased`,
-  },
   h1: {
     ...tw`text-7xl text-purple-400`,
+  },
+  a: {
+    ...tw`text-purple-400 hover:text-purple-700 transition-colors duration-200`,
   },
 });
 
 const GlobalStyles = () => (
-  <>
+  <React.Fragment>
     <BaseStyles />
     <Global styles={customStyles} />
-  </>
+  </React.Fragment>
 );
 
 export default GlobalStyles;
